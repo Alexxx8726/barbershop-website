@@ -18,7 +18,9 @@
         </div>
         <div class="group-wrapper">
           <div class="overlap-group-wrapper">
-            <div class="overlap-group"><div class="text-wrapper-5">ОНЛАЙН ЗАПИС</div></div>
+            <div class="overlap-group">
+              <a href="#booking-form" class="text-wrapper-5">ОНЛАЙН ЗАПИС</a>
+            </div>
           </div>
         </div>
       </div>
@@ -41,7 +43,7 @@
             <div class="barber-name">Руденко Віталій</div>
             <div class="barber-specialization">Спеціалізація: Стрижка бороди</div>
             <p class="barber-description">
-              Сергій – майстер із багаторічним досвідом, який створює ідеальні контури бороди. Його точність і увага до деталей роблять кожну стрижку справжнім мистецтвом.
+              Руденко – майстер із багаторічним досвідом, який створює ідеальні контури бороди. Його точність і увага до деталей роблять кожну стрижку справжнім мистецтвом.
             </p>
           </div>
 
@@ -51,7 +53,7 @@
             <div class="barber-name">Ботрях Дмитро</div>
             <div class="barber-specialization">Спеціалізація: Дитяча стрижка</div>
             <p class="barber-description">
-              Анатолій – експерт із дитячих стрижок, який вміє знайти підхід до найменших клієнтів. Його стрижки – це комфорт і стиль для дітей будь-якого віку.
+              Ботрях – експерт із дитячих стрижок, який вміє знайти підхід до найменших клієнтів. Його стрижки – це комфорт і стиль для дітей будь-якого віку.
             </p>
           </div>
 
@@ -61,32 +63,108 @@
             <div class="barber-name">Олійник Максим</div>
             <div class="barber-specialization">Спеціалізація: Стильна стрижка</div>
             <p class="barber-description">
-              Віталій – майстер сучасних трендів, який створює стильні стрижки, що підкреслюють індивідуальність. Від фейдів до текстурованих зачісок – він знає все.
+              Олійник – майстер сучасних трендів, який створює стильні стрижки, що підкреслюють індивідуальність. Від фейдів до текстурованих зачісок – він знає все.
             </p>
           </div>
 
-
-          <!-- Barber 4-->
+          <!-- Barber 4 -->
           <div class="barber-card">
             <img class="barber-image" src="images/barber4.png" alt="Боженко Роман" />
             <div class="barber-name">Боженко Роман</div>
             <div class="barber-specialization">Спеціалізація: Стильна стрижка</div>
             <p class="barber-description">
-              Віталій – майстер сучасних трендів, який створює стильні стрижки, що підкреслюють індивідуальність. Від фейдів до текстурованих зачісок – він знає все.
+              Боженко – майстер сучасних трендів, який створює стильні стрижки, що підкреслюють індивідуальність. Від фейдів до текстурованих зачісок – він знає все.
             </p>
           </div>
 
-           <!-- Barber 5-->
+          <!-- Barber 5 -->
           <div class="barber-card">
             <img class="barber-image" src="images/barber4.png" alt="Ботрях Петро" />
             <div class="barber-name">Ботрях Петро</div>
             <div class="barber-specialization">Спеціалізація: Стильна стрижка</div>
             <p class="barber-description">
-              Віталій – майстер сучасних трендів, який створює стильні стрижки, що підкреслюють індивідуальність. Від фейдів до текстурованих зачісок – він знає все.
+              Ботрях – майстер сучасних трендів, який створює стильні стрижки, що підкреслюють індивідуальність. Від фейдів до текстурованих зачісок – він знає все.
             </p>
           </div>
+        </div>
 
-          
+        <!-- Booking Form -->
+        <div id="booking-form" class="booking-form">
+          <div class="text-wrapper-15">Онлайн Запис</div>
+          <!-- Display success/error message if set -->
+          <div id="form-message" class="form-message" style="display: none;"></div>
+          <form action="http://localhost:3000/book" method="POST" id="booking-form-submit">
+            <label for="barber">Виберіть майстра:</label>
+            <select id="barber" name="barber" required>
+              <option value="">-- Виберіть майстра --</option>
+              <option value="Руденко Віталій">Руденко Віталій (Стрижка бороди)</option>
+              <option value="Ботрях Дмитро">Ботрях Дмитро (Дитяча стрижка)</option>
+              <option value="Олійник Максим">Олійник Максим (Стильна стрижка)</option>
+              <option value="Боженко Роман">Боженко Роман (Стильна стрижка)</option>
+              <option value="Ботрях Петро">Ботрях Петро (Стильна стрижка)</option>
+            </select>
+
+            <label for="service">Послуга:</label>
+            <select id="service" name="service" required>
+              <option value="">-- Виберіть послугу --</option>
+              <option value="Стрижка бороди">Стрижка бороди</option>
+              <option value="Дитяча стрижка">Дитяча стрижка</option>
+              <option value="Стильна стрижка">Стильна стрижка</option>
+            </select>
+
+            <label for="date">Дата:</label>
+            <input type="date" id="date" name="date" required min="2025-05-13">
+
+            <label for="time">Час:</label>
+            <select id="time" name="time" required>
+              <option value="">-- Виберіть час --</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+            </select>
+
+            <label for="name">Ім’я:</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше ім’я">
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+38(XXX)XXX-XXXX" pattern="\+38[0-9]{9,10}">
+
+            <button type="submit">Записатися</button>
+          </form>
+          <script>
+            // Handle form submission with JavaScript
+            document.getElementById('booking-form-submit').addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const form = e.target;
+              const formData = new FormData(form);
+              const messageDiv = document.getElementById('form-message');
+
+              try {
+                const response = await fetch(form.action, {
+                  method: 'POST',
+                  body: formData
+                });
+                const result = await response.json();
+                messageDiv.className = `form-message ${result.status}`;
+                messageDiv.textContent = result.message;
+                messageDiv.style.display = 'block';
+                if (result.status === 'success') {
+                  form.reset();
+                }
+              } catch (error) {
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = 'Помилка сервера: ' + error.message;
+                messageDiv.style.display = 'block';
+              }
+            });
+          </script>
         </div>
       </div>
 
